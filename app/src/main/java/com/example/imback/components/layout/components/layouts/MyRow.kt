@@ -1,4 +1,4 @@
-package com.example.imback.components.layout
+package com.example.imback.components.layout.components.layouts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll

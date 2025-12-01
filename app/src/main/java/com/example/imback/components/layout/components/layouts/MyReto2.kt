@@ -1,4 +1,4 @@
-package com.example.imback.components.layout
+package com.example.imback.components.layout.components.layouts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -25,7 +25,7 @@ fun MyReto2(modifier: Modifier = Modifier) {
         Box(
             modifier
                 .size(75.dp)
-                .background(Color.Yellow)
+                .background(Yellow)
                 .constrainAs(boxYellow) {
                     bottom.linkTo(parent.bottom)
                     top.linkTo(parent.top)
@@ -73,7 +73,7 @@ fun MyReto2(modifier: Modifier = Modifier) {
         Box(
             modifier
                 .size(75.dp)
-                .background(Color.Red)
+                .background(Red)
                 .constrainAs(boxRed) {
                     start.linkTo(boxYellow.end)
                     top.linkTo(boxYellow.bottom)
@@ -82,7 +82,7 @@ fun MyReto2(modifier: Modifier = Modifier) {
         Box(
             modifier
                 .size(175.dp)
-                .background(Color.Cyan)
+                .background(Cyan)
                 .constrainAs(boxCyan) {
                     bottom.linkTo(boxMagenta.top)
                     end.linkTo(boxMagenta.end)

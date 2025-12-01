@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.imback.components.layout.ConstraintBarrier
+import com.example.imback.ficheros.MyTextFieldParent
 import com.example.imback.ui.theme.ImbackTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,13 +19,15 @@ class MainActivity : ComponentActivity() {
             ImbackTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    MyConstaintLayout()
-                    ConstraintBarrier(Modifier.padding(innerPadding))
+//                    ConstraintBarrier(Modifier.padding(innerPadding))
 //                    MyReto1(Modifier.padding(innerPadding))
 //                    MyReto2()
 //                    Column(Modifier.padding(innerPadding)) {
 //                        MyRow()
 //                        MyColumn()
 //                    }
+//                    MyState(Modifier.padding(innerPadding))
+                    MyTextFieldParent(Modifier.padding(innerPadding))
                 }
             }
         }

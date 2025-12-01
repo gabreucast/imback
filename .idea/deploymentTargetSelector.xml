@@ -5,9 +5,6 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Example2">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="Example">
         <option name="selectionMode" value="DROPDOWN" />
         <DropdownSelection timestamp="2025-11-20T18:15:52.799528300Z">
@@ -26,6 +23,9 @@
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="ConstraintBarrier">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="MyTextFieldParent">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

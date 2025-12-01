@@ -1,4 +1,4 @@
-package com.example.imback.components.layout
+package com.example.imback.components.layout.components.layouts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -14,8 +14,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
+@Preview
 @Composable
-fun MyBox(height: Modifier) {
+fun MyBox(height: Modifier = Modifier) {
     Box(
         modifier = Modifier
             .width(200.dp)
