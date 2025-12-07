@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.imback.ficheros.MyTextFieldParent
+import com.example.imback.ficheros.MyButtons
 import com.example.imback.ui.theme.ImbackTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,7 +27,12 @@ class MainActivity : ComponentActivity() {
 //                        MyColumn()
 //                    }
 //                    MyState(Modifier.padding(innerPadding))
-                    MyTextFieldParent(Modifier.padding(innerPadding))
+//                    MyTextFieldParent(Modifier
+//                        .padding(innerPadding)
+//                        .background(Color.White)
+//                        .fillMaxSize()
+//                        .padding(10.dp))
+                    MyButtons(Modifier.padding(innerPadding))
                 }
             }
         }
