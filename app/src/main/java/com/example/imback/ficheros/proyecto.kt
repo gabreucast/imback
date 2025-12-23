@@ -37,7 +37,7 @@ fun Start(modifier: Modifier = Modifier) {
         modifier
             .fillMaxSize()
             .background(Color.LightGray)
-            .padding(16.dp)
+            .padding(22.dp)
     ) {
         val (block1, block2, block3, textBlock4, block4) = createRefs()
         val (spacer1, spacer2, spacer3, spacer4) = createRefs()
@@ -337,11 +337,11 @@ fun HomeCard(
 ) {
     Box(
         modifier
-            .height(140.dp)
-            .width(170.dp)
+            .height(130.dp)
+            .width(160.dp)
             .clip(RoundedCornerShape(20))
             .background(backgroundColor)
-            .padding(horizontal = 15.dp, vertical = 16.dp)
+            .padding(horizontal = 15.dp, vertical = 10.dp)
     ) {
         Column() {
             Icon(

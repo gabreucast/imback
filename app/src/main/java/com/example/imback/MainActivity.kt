@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.imback.ficheros.Start
+import com.example.imback.ficheros.MySwitch
 import com.example.imback.ui.theme.ImbackTheme
 
 class MainActivity : ComponentActivity() {
@@ -34,7 +34,9 @@ class MainActivity : ComponentActivity() {
 //                        .padding(10.dp))
 //                    MyButtons(Modifier.padding(innerPadding))
 //                    MyImage(Modifier.padding(innerPadding))
-                    Start(Modifier.padding(innerPadding))
+//                    Start(Modifier.padding(innerPadding))
+//                    Progress(Modifier.padding(innerPadding))
+                    MySwitch(Modifier.padding(innerPadding))
                 }
             }
         }

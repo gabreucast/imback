@@ -40,6 +40,13 @@ fun MyImage(modifier: Modifier = Modifier) {
             contentScale = ContentScale.FillBounds
         )
         AsyncImage(
+            /*antes de usarlo, se deben agregar la librerías, paso a paso:
+            1. entrar en https://coil-kt.github.io/coil/
+            2. colocar estas 2 librerias en el gradle y sicronizar:
+                implementation("io.coil-kt.coil3:coil-compose:3.3.0")
+                implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
+            */
+
             model = "https://imagenes.elpais.com/resizer/v2/RESGTJDP6ZHVLLSPQRSS35O33A.jpg?auth=58a8289db14a757c7c1347d3b0ceb43c2e479472571df1d9e0b35582b8d46594&width=500",
             contentDescription = "Dog with glasses",
             modifier = Modifier.size(200.dp),
