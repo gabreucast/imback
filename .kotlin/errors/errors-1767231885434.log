@@ -1,0 +1,766 @@
+kotlin version: 2.0.21
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: C:/Users/dsas3/AndroidStudioProjects/imback/app/src/main/java/com/example/imback/ficheros/Sliders.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:65)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:52)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:38)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:246)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipeline.kt:142)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:148)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:103)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:49)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:101)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally$lambda$9$compile(IncrementalCompilerRunner.kt:249)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally(IncrementalCompilerRunner.kt:267)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:120)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:675)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:92)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1660)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:MySliderAdvance visibility:public modality:FINAL <> (modifier:androidx.compose.ui.Modifier?, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int, $default:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    OptIn(markerClass = [CLASS_REFERENCE 'CLASS IR_EXTERNAL_DECLARATION_STUB ANNOTATION_CLASS name:ExperimentalMaterial3Api modality:OPEN visibility:public superTypes:[kotlin.Annotation]' type=kotlin.reflect.KClass<androidx.compose.material3.ExperimentalMaterial3Api>])
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  VALUE_PARAMETER name:modifier index:0 type:androidx.compose.ui.Modifier? [assignable]
+  VALUE_PARAMETER name:$composer index:1 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:2 type:kotlin.Int
+  VALUE_PARAMETER MASK_FOR_DEFAULT_FUNCTION name:$default index:3 type:kotlin.Int
+  BLOCK_BODY
+    BLOCK type=kotlin.Unit origin=null
+      SET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=kotlin.Unit origin=null
+        CALL 'public abstract fun startRestartGroup (key: kotlin.Int): androidx.compose.runtime.Composer declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.Composer origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+          key: CONST Int type=kotlin.Int value=2037695191
+      CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+        sourceInformation: CONST String type=kotlin.String value="C(MySliderAdvance)54@1793L33,56@1844L219,65@2097L106,71@2209L1099:Sliders.kt#9nqhth"
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+              arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                $this: GET_VAR '$changed: kotlin.Int declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=kotlin.Int origin=null
+                other: CONST Int type=kotlin.Int value=1
+              arg1: CONST Int type=kotlin.Int value=0
+          arg1: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public abstract fun <get-skipping> (): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+              $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+        then: BLOCK type=kotlin.Unit origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=1
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'modifier: androidx.compose.ui.Modifier? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=kotlin.Unit origin=null
+                GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventStart (key: kotlin.Int, dirty1: kotlin.Int, dirty2: kotlin.Int, info: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                key: CONST Int type=kotlin.Int value=2037695191
+                dirty1: GET_VAR '$changed: kotlin.Int declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=kotlin.Int origin=null
+                dirty2: CONST Int type=kotlin.Int value=-1
+                info: CONST String type=kotlin.String value="com.example.imback.ficheros.MySliderAdvance (Sliders.kt:53)"
+          VAR PROPERTY_DELEGATE name:textValueChangeFinished$delegate type:androidx.compose.runtime.MutableState<kotlin.Boolean> [val]
+            BLOCK type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+              BLOCK type=kotlin.Unit origin=null
+                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+                  key: CONST Int type=kotlin.Int value=2066681363
+                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+                  sourceInformation: CONST String type=kotlin.String value="CC(remember):Sliders.kt#9igjgp"
+              VAR IR_TEMPORARY_VARIABLE name:tmp0_group type:androidx.compose.runtime.MutableState<kotlin.Boolean> [val]
+                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+                  <T>: androidx.compose.runtime.MutableState<kotlin.Boolean>
+                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+                  invalid: CONST Boolean type=kotlin.Boolean value=false
+                  block: BLOCK type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Boolean>> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    FUNCTION_REFERENCE 'private final fun MySliderAdvance$lambda$9 (): androidx.compose.runtime.MutableState<kotlin.Boolean> declared in com.example.imback.ficheros.SlidersKt' type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Boolean>> origin=INLINE_LAMBDA reflectionTarget=null
+              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+              GET_VAR 'val tmp0_group: androidx.compose.runtime.MutableState<kotlin.Boolean> [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+          VAR name:state type:androidx.compose.material3.SliderState [val]
+            BLOCK type=androidx.compose.material3.SliderState origin=null
+              BLOCK type=kotlin.Unit origin=null
+                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+                  key: CONST Int type=kotlin.Int value=2066683181
+                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+                  sourceInformation: CONST String type=kotlin.String value="CC(remember):Sliders.kt#9igjgp"
+              VAR IR_TEMPORARY_VARIABLE name:tmp1_group type:androidx.compose.material3.SliderState [val]
+                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=androidx.compose.material3.SliderState origin=null
+                  <T>: androidx.compose.material3.SliderState
+                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+                  invalid: CONST Boolean type=kotlin.Boolean value=false
+                  block: BLOCK type=kotlin.Function0<androidx.compose.material3.SliderState> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    FUNCTION_REFERENCE 'private final fun MySliderAdvance$lambda$13 ($textValueChangeFinished$delegate: androidx.compose.runtime.MutableState<kotlin.Boolean>): androidx.compose.material3.SliderState declared in com.example.imback.ficheros.SlidersKt' type=kotlin.Function0<androidx.compose.material3.SliderState> origin=INLINE_LAMBDA reflectionTarget=null
+                      $textValueChangeFinished$delegate: GET_VAR 'val textValueChangeFinished$delegate: androidx.compose.runtime.MutableState<kotlin.Boolean> [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+              GET_VAR 'val tmp1_group: androidx.compose.material3.SliderState [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.material3.SliderState origin=null
+          VAR name:colors type:androidx.compose.material3.SliderColors [val]
+            CALL 'public final fun colors-q0g_0yA (thumbColor: androidx.compose.ui.graphics.Color, activeTrackColor: androidx.compose.ui.graphics.Color, activeTickColor: androidx.compose.ui.graphics.Color, inactiveTrackColor: androidx.compose.ui.graphics.Color, inactiveTickColor: androidx.compose.ui.graphics.Color, disabledThumbColor: androidx.compose.ui.graphics.Color, disabledActiveTrackColor: androidx.compose.ui.graphics.Color, disabledActiveTickColor: androidx.compose.ui.graphics.Color, disabledInactiveTrackColor: androidx.compose.ui.graphics.Color, disabledInactiveTickColor: androidx.compose.ui.graphics.Color, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): androidx.compose.material3.SliderColors declared in androidx.compose.material3.SliderDefaults' type=androidx.compose.material3.SliderColors origin=null
+              $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:androidx.compose.material3.SliderDefaults visibility:public [final,static] declared in androidx.compose.material3.SliderDefaults' type=androidx.compose.material3.SliderDefaults origin=null
+              thumbColor: CALL 'public final fun getBlue-0d7_KjU (): androidx.compose.ui.graphics.Color declared in androidx.compose.ui.graphics.Color.Companion' type=androidx.compose.ui.graphics.Color origin=GET_PROPERTY
+                $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.graphics.Color.Companion visibility:public [final,static] declared in androidx.compose.ui.graphics.Color' type=androidx.compose.ui.graphics.Color.Companion origin=null
+              activeTrackColor: CALL 'public final fun getRed-0d7_KjU (): androidx.compose.ui.graphics.Color declared in androidx.compose.ui.graphics.Color.Companion' type=androidx.compose.ui.graphics.Color origin=GET_PROPERTY
+                $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.graphics.Color.Companion visibility:public [final,static] declared in androidx.compose.ui.graphics.Color' type=androidx.compose.ui.graphics.Color.Companion origin=null
+              activeTickColor: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                  <T>: kotlin.Long
+                  <R>: androidx.compose.ui.graphics.Color
+                  v: CONST Long type=kotlin.Long value=0
+              inactiveTrackColor: CALL 'public final fun getGreen-0d7_KjU (): androidx.compose.ui.graphics.Color declared in androidx.compose.ui.graphics.Color.Companion' type=androidx.compose.ui.graphics.Color origin=GET_PROPERTY
+                $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.graphics.Color.Companion visibility:public [final,static] declared in androidx.compose.ui.graphics.Color' type=androidx.compose.ui.graphics.Color.Companion origin=null
+              inactiveTickColor: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                  <T>: kotlin.Long
+                  <R>: androidx.compose.ui.graphics.Color
+                  v: CONST Long type=kotlin.Long value=0
+              disabledThumbColor: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                  <T>: kotlin.Long
+                  <R>: androidx.compose.ui.graphics.Color
+                  v: CONST Long type=kotlin.Long value=0
+              disabledActiveTrackColor: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                  <T>: kotlin.Long
+                  <R>: androidx.compose.ui.graphics.Color
+                  v: CONST Long type=kotlin.Long value=0
+              disabledActiveTickColor: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                  <T>: kotlin.Long
+                  <R>: androidx.compose.ui.graphics.Color
+                  v: CONST Long type=kotlin.Long value=0
+              disabledInactiveTrackColor: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                  <T>: kotlin.Long
+                  <R>: androidx.compose.ui.graphics.Color
+                  v: CONST Long type=kotlin.Long value=0
+              disabledInactiveTickColor: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+                  <T>: kotlin.Long
+                  <R>: androidx.compose.ui.graphics.Color
+                  v: CONST Long type=kotlin.Long value=0
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=3126
+              $changed1: CONST Int type=kotlin.Int value=6
+              $default: CONST Int type=kotlin.Int value=1012
+          CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.ColumnKt' type=kotlin.Unit origin=null
+            modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            verticalArrangement: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            horizontalAlignment: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            content: BLOCK type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun MySliderAdvance$lambda$17 ($state: androidx.compose.material3.SliderState, $colors: androidx.compose.material3.SliderColors, $textValueChangeFinished$delegate: androidx.compose.runtime.MutableState<kotlin.Boolean>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in com.example.imback.ficheros.SlidersKt' type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                $state: GET_VAR 'val state: androidx.compose.material3.SliderState [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.material3.SliderState origin=null
+                $colors: GET_VAR 'val colors: androidx.compose.material3.SliderColors [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.material3.SliderColors origin=null
+                $textValueChangeFinished$delegate: GET_VAR 'val textValueChangeFinished$delegate: androidx.compose.runtime.MutableState<kotlin.Boolean> [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=0
+            $default: CONST Int type=kotlin.Int value=7
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventEnd (): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+      BRANCH
+        if: CONST Boolean type=kotlin.Boolean value=true
+        then: CALL 'public abstract fun skipToGroupEnd (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+    BLOCK type=kotlin.Unit origin=null
+      BLOCK type=kotlin.Unit origin=FOLDED_SAFE_CALL
+        WHEN type=kotlin.Unit origin=FOLDED_SAFE_CALL
+          BRANCH
+            if: COMPOSITE type=kotlin.Boolean origin=null
+              VAR IR_TEMPORARY_VARIABLE name:tmp2_safe_receiver type:androidx.compose.runtime.ScopeUpdateScope? [val]
+                CALL 'public abstract fun endRestartGroup (): androidx.compose.runtime.ScopeUpdateScope? declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.Composer? origin=null
+              CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: GET_VAR 'val tmp2_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  arg1: CONST Null type=kotlin.Nothing? value=null
+            then: CALL 'public abstract fun updateScope (block: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>): kotlin.Unit declared in androidx.compose.runtime.ScopeUpdateScope' type=kotlin.Unit origin=null
+              $this: GET_VAR 'val tmp2_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+              block: BLOCK type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=LAMBDA
+                COMPOSITE type=kotlin.Unit origin=null
+                CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                  <T>: kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit>
+                  dynamicCall: CALL 'public final fun invoke (p0: androidx.compose.ui.Modifier?, p1: kotlin.Int, p2: kotlin.Int): kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                    p0: GET_VAR 'modifier: androidx.compose.ui.Modifier? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=androidx.compose.ui.Modifier? origin=null
+                    p1: GET_VAR '$changed: kotlin.Int declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=kotlin.Int origin=null
+                    p2: GET_VAR '$default: kotlin.Int declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance' type=kotlin.Int origin=null
+                  bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                    tag: CONST Int type=kotlin.Int value=6
+                    owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+                    name: CONST String type=kotlin.String value="metafactory"
+                    descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+                    isInterface: CONST Boolean type=kotlin.Boolean value=false
+                  bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Any
+                    RAW_FUNCTION_REFERENCE 'private final fun MySliderAdvance$lambda$18 ($modifier: androidx.compose.ui.Modifier?, $$changed: kotlin.Int, $$default: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $force: kotlin.Int): kotlin.Unit? declared in com.example.imback.ficheros.SlidersKt' type=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.runtime.Composer?, p2: kotlin.Int?): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+          BRANCH
+            if: CONST Boolean type=kotlin.Boolean value=true
+            then: CONST Null type=kotlin.Any? value=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:40)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:406)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:423)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:168)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:62)
+	... 44 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:MySliderAdvance$lambda$17 visibility:private modality:FINAL <> ($receiver:androidx.compose.foundation.layout.ColumnScope, $state:androidx.compose.material3.SliderState, $colors:androidx.compose.material3.SliderColors, $textValueChangeFinished$delegate:androidx.compose.runtime.MutableState<kotlin.Boolean>, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  $receiver: VALUE_PARAMETER name:$this$Column type:androidx.compose.foundation.layout.ColumnScope
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$state index:0 type:androidx.compose.material3.SliderState
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$colors index:1 type:androidx.compose.material3.SliderColors
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$textValueChangeFinished$delegate index:2 type:androidx.compose.runtime.MutableState<kotlin.Boolean>
+  VALUE_PARAMETER name:$composer index:3 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:4 type:kotlin.Int
+  BLOCK_BODY
+    VAR name:$i$a$-Column-SlidersKt$MySliderAdvance$1 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    BLOCK type=kotlin.Unit origin=null
+      CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+        key: CONST Int type=kotlin.Int value=995330367
+        sourceInformation: CONST String type=kotlin.String value="C72@2226L144,77@2379L30,78@2418L53,83@2587L429,95@3027L274,80@2481L820:Sliders.kt#9nqhth"
+      COMPOSITE type=kotlin.Unit origin=null
+        CALL 'public final fun Slider (state: androidx.compose.material3.SliderState, modifier: androidx.compose.ui.Modifier?, enabled: kotlin.Boolean, colors: androidx.compose.material3.SliderColors?, interactionSource: androidx.compose.foundation.interaction.MutableInteractionSource?, thumb: kotlin.Function3<androidx.compose.material3.SliderState, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>?, track: kotlin.Function3<androidx.compose.material3.SliderState, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3.SliderKt' type=kotlin.Unit origin=null
+          state: GET_VAR '$state: androidx.compose.material3.SliderState declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.material3.SliderState origin=null
+          modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          enabled: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+            CONST Boolean type=kotlin.Boolean value=false
+          colors: GET_VAR '$colors: androidx.compose.material3.SliderColors declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.material3.SliderColors origin=null
+          interactionSource: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          thumb: CALL 'internal final fun <get-lambda-1> (): kotlin.Function3<androidx.compose.material3.SliderState, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in com.example.imback.ficheros.ComposableSingletons$SlidersKt' type=kotlin.Function3<androidx.compose.material3.SliderState, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=null
+            $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:com.example.imback.ficheros.ComposableSingletons$SlidersKt visibility:public [final,static] declared in com.example.imback.ficheros.ComposableSingletons$SlidersKt' type=com.example.imback.ficheros.ComposableSingletons$SlidersKt origin=null
+          track: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+          $changed: CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: CONST Int type=kotlin.Int value=196608
+            other: GET_FIELD 'FIELD name:$stable type:kotlin.Int visibility:public [final,static] declared in androidx.compose.material3.SliderState' type=kotlin.Int origin=null
+          $default: CONST Int type=kotlin.Int value=86
+        CALL 'public final fun Text--4IGK_g (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3.TextKt' type=kotlin.Unit origin=null
+          text: CALL 'public final fun valueOf (value: kotlin.Float): kotlin.String declared in java.lang.String' type=kotlin.String origin=null
+            value: CALL 'public final fun <get-value> (): kotlin.Float declared in androidx.compose.material3.SliderState' type=kotlin.Float origin=GET_PROPERTY
+              $this: GET_VAR '$state: androidx.compose.material3.SliderState declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.material3.SliderState origin=null
+          modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.graphics.Color
+              v: CONST Long type=kotlin.Long value=0
+          fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.unit.TextUnit
+              v: CONST Long type=kotlin.Long value=0
+          fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          fontWeight: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          fontFamily: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          letterSpacing: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.unit.TextUnit
+              v: CONST Long type=kotlin.Long value=0
+          textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          textAlign: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.unit.TextUnit
+              v: CONST Long type=kotlin.Long value=0
+          overflow: COMPOSITE type=androidx.compose.ui.text.style.TextOverflow origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.text.style.TextOverflow origin=null
+              <T>: kotlin.Int
+              <R>: androidx.compose.ui.text.style.TextOverflow
+              v: CONST Int type=kotlin.Int value=0
+          softWrap: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+            CONST Boolean type=kotlin.Boolean value=false
+          maxLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+            CONST Int type=kotlin.Int value=0
+          minLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+            CONST Int type=kotlin.Int value=0
+          onTextLayout: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+          $changed: CONST Int type=kotlin.Int value=0
+          $changed1: CONST Int type=kotlin.Int value=0
+          $default: CONST Int type=kotlin.Int value=131070
+        CALL 'public final fun Text--4IGK_g (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3.TextKt' type=kotlin.Unit origin=null
+          text: WHEN type=kotlin.String origin=IF
+            BRANCH
+              if: CALL 'private final fun MySliderAdvance$lambda$10 ($textValueChangeFinished$delegate: androidx.compose.runtime.MutableState<kotlin.Boolean>): kotlin.Boolean declared in com.example.imback.ficheros.SlidersKt' type=kotlin.Boolean origin=GET_LOCAL_PROPERTY
+                $textValueChangeFinished$delegate: GET_VAR '$textValueChangeFinished$delegate: androidx.compose.runtime.MutableState<kotlin.Boolean> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+              then: CONST String type=kotlin.String value="HAPPY"
+            BRANCH
+              if: CONST Boolean type=kotlin.Boolean value=true
+              then: CONST String type=kotlin.String value="SAD"
+          modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.graphics.Color
+              v: CONST Long type=kotlin.Long value=0
+          fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.unit.TextUnit
+              v: CONST Long type=kotlin.Long value=0
+          fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          fontWeight: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          fontFamily: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          letterSpacing: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.unit.TextUnit
+              v: CONST Long type=kotlin.Long value=0
+          textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          textAlign: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
+              <T>: kotlin.Long
+              <R>: androidx.compose.ui.unit.TextUnit
+              v: CONST Long type=kotlin.Long value=0
+          overflow: COMPOSITE type=androidx.compose.ui.text.style.TextOverflow origin=DEFAULT_VALUE
+            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.text.style.TextOverflow origin=null
+              <T>: kotlin.Int
+              <R>: androidx.compose.ui.text.style.TextOverflow
+              v: CONST Int type=kotlin.Int value=0
+          softWrap: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+            CONST Boolean type=kotlin.Boolean value=false
+          maxLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+            CONST Int type=kotlin.Int value=0
+          minLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
+            CONST Int type=kotlin.Int value=0
+          onTextLayout: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+            CONST Null type=kotlin.Nothing? value=null
+          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+          $changed: CONST Int type=kotlin.Int value=0
+          $changed1: CONST Int type=kotlin.Int value=0
+          $default: CONST Int type=kotlin.Int value=131070
+        CALL 'public final fun Canvas (modifier: androidx.compose.ui.Modifier, onDraw: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in androidx.compose.foundation.CanvasKt' type=kotlin.Unit origin=null
+          modifier: CALL 'public final fun pointerInput (key1: kotlin.Any?, block: androidx.compose.ui.input.pointer.PointerInputEventHandler): androidx.compose.ui.Modifier declared in androidx.compose.ui.input.pointer.SuspendingPointerInputFilterKt' type=androidx.compose.ui.Modifier origin=null
+            $receiver: CALL 'public final fun size-3ABfNKs (size: androidx.compose.ui.unit.Dp): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout.SizeKt' type=androidx.compose.ui.Modifier origin=null
+              $receiver: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.Modifier.Companion visibility:public [final,static] declared in androidx.compose.ui.Modifier' type=androidx.compose.ui.Modifier.Companion origin=null
+              size: CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                $receiver: CONST Int type=kotlin.Int value=200
+            key1: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:kotlin.Unit visibility:public [final,static] declared in kotlin.Unit' type=kotlin.Unit origin=null
+            block: BLOCK type=androidx.compose.ui.input.pointer.PointerInputEventHandler origin=null
+              BLOCK type=kotlin.Unit origin=null
+                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+                  key: CONST Int type=kotlin.Int value=1001949662
+                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+                  sourceInformation: CONST String type=kotlin.String value="CC(remember):Sliders.kt#9igjgp"
+              VAR IR_TEMPORARY_VARIABLE name:tmp0_group type:androidx.compose.ui.input.pointer.PointerInputEventHandler [val]
+                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=androidx.compose.ui.input.pointer.PointerInputEventHandler origin=null
+                  <T>: androidx.compose.ui.input.pointer.PointerInputEventHandler
+                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+                  invalid: CONST Boolean type=kotlin.Boolean value=false
+                  block: BLOCK type=kotlin.Function0<androidx.compose.ui.input.pointer.PointerInputEventHandler> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    FUNCTION_REFERENCE 'private final fun MySliderAdvance$lambda$17$lambda$14 (): androidx.compose.ui.input.pointer.PointerInputEventHandler declared in com.example.imback.ficheros.SlidersKt' type=kotlin.Function0<androidx.compose.ui.input.pointer.PointerInputEventHandler> origin=INLINE_LAMBDA reflectionTarget=null
+              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+              GET_VAR 'val tmp0_group: androidx.compose.ui.input.pointer.PointerInputEventHandler [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.ui.input.pointer.PointerInputEventHandler origin=null
+          onDraw: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit> origin=null
+            BLOCK type=kotlin.Unit origin=null
+              CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+                key: CONST Int type=kotlin.Int value=1001963587
+              CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+                sourceInformation: CONST String type=kotlin.String value="CC(remember):Sliders.kt#9igjgp"
+            VAR IR_TEMPORARY_VARIABLE name:tmp1_group type:@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit> [val]
+              CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit> origin=null
+                <T>: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit>
+                $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+                invalid: CONST Boolean type=kotlin.Boolean value=false
+                block: BLOCK type=kotlin.Function0<@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit>> origin=LAMBDA
+                  COMPOSITE type=kotlin.Unit origin=null
+                  FUNCTION_REFERENCE 'private final fun MySliderAdvance$lambda$17$lambda$16 (): @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit> declared in com.example.imback.ficheros.SlidersKt' type=kotlin.Function0<@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+            CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+              $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+            GET_VAR 'val tmp1_group: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit> [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.ui.graphics.drawscope.DrawScope, kotlin.Unit> origin=null
+          $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+          $changed: CONST Int type=kotlin.Int value=48
+      CALL 'public final fun sourceInformationMarkerEnd (composer: androidx.compose.runtime.Composer): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17' type=androidx.compose.runtime.Composer? origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:593)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:122)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:413)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:1101)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrWhen.accept(IrWhen.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 54 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:MySliderAdvance$lambda$17$lambda$14 visibility:private modality:FINAL <> () returnType:androidx.compose.ui.input.pointer.PointerInputEventHandler
+  BLOCK_BODY
+    VAR name:$i$a$-cache-SlidersKt$MySliderAdvance$1$1 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    RETURN type=kotlin.Nothing from='private final fun MySliderAdvance$lambda$17$lambda$14 (): androidx.compose.ui.input.pointer.PointerInputEventHandler declared in com.example.imback.ficheros.SlidersKt'
+      BLOCK type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> origin=null
+        CLASS LAMBDA_IMPL CLASS name:<no name provided> modality:FINAL visibility:public/*package*/ superTypes:[@[RawType] androidx.compose.ui.input.pointer.PointerInputEventHandler]
+          $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>
+          CONSTRUCTOR GENERATED_MEMBER_IN_CALLABLE_REFERENCE visibility:public/*package*/ <> () returnType:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> [primary]
+            BLOCK_BODY
+              DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+              BLOCK type=kotlin.Unit origin=null
+          FUN name:invoke visibility:public modality:FINAL <> ($this:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>, $this$pointerInput:androidx.compose.ui.input.pointer.PointerInputScope, $completion:kotlin.coroutines.Continuation<kotlin.Unit>) returnType:kotlin.Any? [suspend]
+            overridden:
+              public abstract fun invoke ($completion: kotlin.coroutines.Continuation<kotlin.Unit>): kotlin.Any? [suspend,operator] declared in androidx.compose.ui.input.pointer.PointerInputEventHandler
+            $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>
+            VALUE_PARAMETER name:$this$pointerInput index:0 type:androidx.compose.ui.input.pointer.PointerInputScope
+            VALUE_PARAMETER CONTINUATION_CLASS name:$completion index:1 type:kotlin.coroutines.Continuation<kotlin.Unit>
+            BLOCK_BODY
+              CLASS CONTINUATION_CLASS CLASS name:<Continuation> modality:FINAL visibility:public/*package*/ superTypes:[kotlin.coroutines.jvm.internal.ContinuationImpl]
+                $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>
+                FIELD CONTINUATION_CLASS_RESULT_FIELD name:result type:kotlin.Result<kotlin.Any?> visibility:public/*package*/
+                FIELD FIELD_FOR_OUTER_THIS name:this$0 type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> visibility:public/*package*/ [final]
+                FIELD name:label type:kotlin.Int visibility:public/*package*/
+                CONSTRUCTOR visibility:public/*package*/ <> (this$0:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>, $completion:kotlin.coroutines.Continuation<com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>>?) returnType:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> [primary]
+                  VALUE_PARAMETER name:this$0 index:0 type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>
+                  VALUE_PARAMETER name:$completion index:1 type:kotlin.coroutines.Continuation<com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>>?
+                  BLOCK_BODY
+                    SET_FIELD 'FIELD FIELD_FOR_OUTER_THIS name:this$0 type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> visibility:public/*package*/ [final] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>' type=kotlin.Unit origin=null
+                      receiver: GET_VAR '<this>: com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> origin=null
+                      value: GET_VAR 'this$0: com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.<init>' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> origin=null
+                    DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> ($completion: kotlin.coroutines.Continuation<kotlin.Any?>?) declared in kotlin.coroutines.jvm.internal.ContinuationImpl'
+                      $completion: GET_VAR '$completion: kotlin.coroutines.Continuation<com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>>? declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.<init>' type=kotlin.coroutines.Continuation<com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>>? origin=null
+                FUN name:invokeSuspend visibility:public modality:FINAL <> ($this:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>, $result:kotlin.Result<kotlin.Any?>) returnType:kotlin.Any?
+                  overridden:
+                    public abstract fun invokeSuspend ($result: kotlin.Result<kotlin.Any?>): kotlin.Any? declared in kotlin.coroutines.jvm.internal.ContinuationImpl
+                  $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>
+                  VALUE_PARAMETER name:$result index:0 type:kotlin.Result<kotlin.Any?>
+                  BLOCK_BODY
+                    SET_FIELD 'FIELD CONTINUATION_CLASS_RESULT_FIELD name:result type:kotlin.Result<kotlin.Any?> visibility:public/*package*/ declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>' type=kotlin.Unit origin=null
+                      receiver: GET_VAR '<this>: com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.invokeSuspend' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> origin=null
+                      value: GET_VAR '$result: kotlin.Result<kotlin.Any?> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.invokeSuspend' type=kotlin.Result<kotlin.Any?> origin=null
+                    SET_FIELD 'FIELD name:label type:kotlin.Int visibility:public/*package*/ declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>' type=kotlin.Unit origin=null
+                      receiver: GET_VAR '<this>: com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.invokeSuspend' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> origin=null
+                      value: CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_FIELD 'FIELD name:label type:kotlin.Int visibility:public/*package*/ declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>' type=kotlin.Int origin=null
+                          receiver: GET_VAR '<this>: com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.invokeSuspend' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> origin=null
+                        other: CONST Int type=kotlin.Int value=-2147483648
+                    RETURN type=kotlin.Nothing from='public final fun invokeSuspend ($result: kotlin.Result<kotlin.Any?>): kotlin.Any? declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>'
+                      CALL 'public final fun invoke ($this$pointerInput: androidx.compose.ui.input.pointer.PointerInputScope, $completion: kotlin.coroutines.Continuation<kotlin.Unit>): kotlin.Any? [suspend] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>' type=kotlin.Any? origin=null
+                        $this: GET_FIELD 'FIELD FIELD_FOR_OUTER_THIS name:this$0 type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> visibility:public/*package*/ [final] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> origin=null
+                          receiver: GET_VAR '<this>: com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.invokeSuspend' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> origin=null
+                        $this$pointerInput: CONST Null type=androidx.compose.ui.input.pointer.PointerInputScope? value=null
+                        $completion: GET_VAR '<this>: com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation>.invokeSuspend' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke.<Continuation> origin=null
+              RETURN type=kotlin.Nothing from='public final fun invoke ($this$pointerInput: androidx.compose.ui.input.pointer.PointerInputScope, $completion: kotlin.coroutines.Continuation<kotlin.Unit>): kotlin.Any? [suspend] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>'
+                CALL 'public final fun detectDragGestures$default (onDragStart: kotlin.Function1<androidx.compose.ui.geometry.Offset, kotlin.Unit>?, onDragEnd: kotlin.Function0<kotlin.Unit>?, onDragCancel: kotlin.Function0<kotlin.Unit>?, onDrag: kotlin.Function2<@[ParameterName(name = "change")] androidx.compose.ui.input.pointer.PointerInputChange, @[ParameterName(name = "dragAmount")] androidx.compose.ui.geometry.Offset, kotlin.Unit>, $completion: kotlin.coroutines.Continuation<kotlin.Unit>, $mask0: kotlin.Int, $handler: kotlin.Any?): kotlin.Any? [suspend] declared in androidx.compose.foundation.gestures.DragGestureDetectorKt' type=kotlin.Unit origin=DEFAULT_DISPATCH_CALL
+                  $receiver: GET_VAR '$this$pointerInput: androidx.compose.ui.input.pointer.PointerInputScope declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke' type=androidx.compose.ui.input.pointer.PointerInputScope origin=null
+                  onDragStart: COMPOSITE type=kotlin.Function1<androidx.compose.ui.geometry.Offset, kotlin.Unit>? origin=DEFAULT_VALUE
+                    CONST Null type=kotlin.Function1<androidx.compose.ui.geometry.Offset, kotlin.Unit>? value=null
+                  onDragEnd: COMPOSITE type=kotlin.Function0<kotlin.Unit>? origin=DEFAULT_VALUE
+                    CONST Null type=kotlin.Function0<kotlin.Unit>? value=null
+                  onDragCancel: COMPOSITE type=kotlin.Function0<kotlin.Unit>? origin=DEFAULT_VALUE
+                    CONST Null type=kotlin.Function0<kotlin.Unit>? value=null
+                  onDrag: BLOCK type=kotlin.Function2<androidx.compose.ui.input.pointer.PointerInputChange, androidx.compose.ui.geometry.Offset, kotlin.Unit> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=kotlin.Function2<androidx.compose.ui.input.pointer.PointerInputChange, androidx.compose.ui.geometry.Offset, kotlin.Unit> origin=null
+                      <T>: kotlin.Function2<androidx.compose.ui.input.pointer.PointerInputChange, androidx.compose.ui.geometry.Offset, kotlin.Unit>
+                      dynamicCall: CALL 'public final fun invoke (p0: androidx.compose.ui.input.pointer.PointerInputScope): kotlin.Function2<androidx.compose.ui.input.pointer.PointerInputChange, androidx.compose.ui.geometry.Offset, kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=kotlin.Function2<androidx.compose.ui.input.pointer.PointerInputChange, androidx.compose.ui.geometry.Offset, kotlin.Unit> origin=null
+                        p0: GET_VAR '$this$pointerInput: androidx.compose.ui.input.pointer.PointerInputScope declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke' type=androidx.compose.ui.input.pointer.PointerInputScope origin=null
+                      bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                        tag: CONST Int type=kotlin.Int value=6
+                        owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+                        name: CONST String type=kotlin.String value="metafactory"
+                        descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+                        isInterface: CONST Boolean type=kotlin.Boolean value=false
+                      bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+                        CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                          method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Any
+                        RAW_FUNCTION_REFERENCE 'private final fun invoke$lambda$0 ($this_pointerInput: androidx.compose.ui.input.pointer.PointerInputScope, change: androidx.compose.ui.input.pointer.PointerInputChange, <unused var>: androidx.compose.ui.geometry.Offset?): kotlin.Unit? declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>' type=kotlin.Any
+                        CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                          method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.ui.input.pointer.PointerInputChange, p2: androidx.compose.ui.geometry.Offset?): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+                  $completion: GET_VAR '$completion: kotlin.coroutines.Continuation<kotlin.Unit> declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke' type=kotlin.coroutines.Continuation<kotlin.Unit> origin=null
+                  $mask0: CONST Int type=kotlin.Int value=7
+                  $handler: CONST Null type=kotlin.Any? value=null
+          FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+            overridden:
+              public open fun equals (other: kotlin.Any?): kotlin.Boolean [fake_override,operator] declared in androidx.compose.ui.input.pointer.PointerInputEventHandler
+            $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+            VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+          FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+            overridden:
+              public open fun hashCode (): kotlin.Int [fake_override] declared in androidx.compose.ui.input.pointer.PointerInputEventHandler
+            $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+          FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+            overridden:
+              public open fun toString (): kotlin.String [fake_override] declared in androidx.compose.ui.input.pointer.PointerInputEventHandler
+            $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+          FUN LOCAL_FUNCTION_FOR_LAMBDA name:invoke$lambda$0 visibility:private modality:FINAL <> ($this_pointerInput:androidx.compose.ui.input.pointer.PointerInputScope, change:androidx.compose.ui.input.pointer.PointerInputChange, <unused var>:androidx.compose.ui.geometry.Offset?) returnType:kotlin.Unit?
+            VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$this_pointerInput index:0 type:androidx.compose.ui.input.pointer.PointerInputScope
+            VALUE_PARAMETER name:change index:1 type:androidx.compose.ui.input.pointer.PointerInputChange
+            VALUE_PARAMETER UNDERSCORE_PARAMETER name:<unused var> index:2 type:androidx.compose.ui.geometry.Offset?
+            BLOCK_BODY
+              VAR name:center type:androidx.compose.ui.unit.IntOffset [val]
+                CALL 'public final fun getCenter-ozmzZPI (): androidx.compose.ui.unit.IntOffset declared in androidx.compose.ui.unit.IntSizeKt' type=androidx.compose.ui.unit.IntOffset origin=GET_PROPERTY
+                  $receiver: CALL 'public abstract fun getSize-YbymL2g (): androidx.compose.ui.unit.IntSize declared in androidx.compose.ui.input.pointer.PointerInputScope' type=androidx.compose.ui.unit.IntSize origin=GET_PROPERTY
+                    $this: GET_VAR '$this_pointerInput: androidx.compose.ui.input.pointer.PointerInputScope declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.input.pointer.PointerInputScope origin=null
+              VAR name:touch type:androidx.compose.ui.geometry.Offset [val]
+                CALL 'public final fun getPosition-F1C5BW0 (): androidx.compose.ui.geometry.Offset declared in androidx.compose.ui.input.pointer.PointerInputChange' type=androidx.compose.ui.geometry.Offset origin=GET_PROPERTY
+                  $this: GET_VAR 'change: androidx.compose.ui.input.pointer.PointerInputChange declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.input.pointer.PointerInputChange origin=null
+              VAR name:dx type:kotlin.Float [val]
+                CALL 'public final fun minus (other: kotlin.Int): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+                  $this: CALL 'public final fun getX-impl (arg0: androidx.compose.ui.geometry.Offset): kotlin.Float [inline] declared in androidx.compose.ui.geometry.Offset' type=kotlin.Float origin=GET_PROPERTY
+                    arg0: GET_VAR 'val touch: androidx.compose.ui.geometry.Offset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.geometry.Offset origin=null
+                  other: CALL 'public final fun getX-impl (arg0: androidx.compose.ui.unit.IntOffset): kotlin.Int declared in androidx.compose.ui.unit.IntOffset' type=kotlin.Int origin=GET_PROPERTY
+                    arg0: GET_VAR 'val center: androidx.compose.ui.unit.IntOffset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.unit.IntOffset origin=null
+              VAR name:dy type:kotlin.Float [val]
+                CALL 'public final fun minus (other: kotlin.Int): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+                  $this: CALL 'public final fun getY-impl (arg0: androidx.compose.ui.geometry.Offset): kotlin.Float [inline] declared in androidx.compose.ui.geometry.Offset' type=kotlin.Float origin=GET_PROPERTY
+                    arg0: GET_VAR 'val touch: androidx.compose.ui.geometry.Offset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.geometry.Offset origin=null
+                  other: CALL 'public final fun getY-impl (arg0: androidx.compose.ui.unit.IntOffset): kotlin.Int declared in androidx.compose.ui.unit.IntOffset' type=kotlin.Int origin=GET_PROPERTY
+                    arg0: GET_VAR 'val center: androidx.compose.ui.unit.IntOffset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.unit.IntOffset origin=null
+              VAR name:radians type:kotlin.Float [val]
+                CALL 'public final fun atan2 (y: kotlin.Float, x: kotlin.Float): kotlin.Float [inline] declared in kotlin.math.MathKt' type=kotlin.Float origin=null
+                  y: GET_VAR 'val dy: kotlin.Float [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=kotlin.Float origin=null
+                  x: GET_VAR 'val dx: kotlin.Float [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=kotlin.Float origin=null
+              SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:angle type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+                value: CALL 'public open fun toInt (): kotlin.Int declared in kotlin.Double' type=kotlin.Int origin=null
+                  $this: CALL 'public open fun toDegrees (p0: kotlin.Double): kotlin.Double declared in java.lang.Math' type=kotlin.Double origin=null
+                    p0: CALL 'public open fun toDouble (): kotlin.Double declared in kotlin.Float' type=kotlin.Double origin=null
+                      $this: GET_VAR 'val radians: kotlin.Float [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=kotlin.Float origin=null
+          FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> visibility:public [final,static]
+          FUN CLASS_STATIC_INITIALIZER name:<clinit> visibility:public/*package*/ modality:FINAL <> () returnType:kotlin.Unit
+            BLOCK_BODY
+              SET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> visibility:public [final,static] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>' type=kotlin.Unit origin=INITIALIZE_FIELD
+                value: CONSTRUCTOR_CALL 'public/*package*/ constructor <init> () [primary] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> origin=null
+        GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> visibility:public [final,static] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>' type=com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided> origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:790)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.declarations.IrVariable.accept(IrVariable.kt:36)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:593)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:122)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:413)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.gen(ExpressionCodegen.kt:217)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrCallGenerator.genValueAndPut(IrCallGenerator.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.gen(ExpressionCodegen.kt:217)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrCallGenerator.genValueAndPut(IrCallGenerator.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:593)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitComposite(IrElementVisitor.kt:125)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitComposite(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitComposite(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrComposite.accept(IrComposite.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:593)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:122)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:413)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 78 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN LOCAL_FUNCTION_FOR_LAMBDA name:invoke$lambda$0 visibility:private modality:FINAL <> ($this_pointerInput:androidx.compose.ui.input.pointer.PointerInputScope, change:androidx.compose.ui.input.pointer.PointerInputChange, <unused var>:androidx.compose.ui.geometry.Offset?) returnType:kotlin.Unit?
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$this_pointerInput index:0 type:androidx.compose.ui.input.pointer.PointerInputScope
+  VALUE_PARAMETER name:change index:1 type:androidx.compose.ui.input.pointer.PointerInputChange
+  VALUE_PARAMETER UNDERSCORE_PARAMETER name:<unused var> index:2 type:androidx.compose.ui.geometry.Offset?
+  BLOCK_BODY
+    VAR name:center type:androidx.compose.ui.unit.IntOffset [val]
+      CALL 'public final fun getCenter-ozmzZPI (): androidx.compose.ui.unit.IntOffset declared in androidx.compose.ui.unit.IntSizeKt' type=androidx.compose.ui.unit.IntOffset origin=GET_PROPERTY
+        $receiver: CALL 'public abstract fun getSize-YbymL2g (): androidx.compose.ui.unit.IntSize declared in androidx.compose.ui.input.pointer.PointerInputScope' type=androidx.compose.ui.unit.IntSize origin=GET_PROPERTY
+          $this: GET_VAR '$this_pointerInput: androidx.compose.ui.input.pointer.PointerInputScope declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.input.pointer.PointerInputScope origin=null
+    VAR name:touch type:androidx.compose.ui.geometry.Offset [val]
+      CALL 'public final fun getPosition-F1C5BW0 (): androidx.compose.ui.geometry.Offset declared in androidx.compose.ui.input.pointer.PointerInputChange' type=androidx.compose.ui.geometry.Offset origin=GET_PROPERTY
+        $this: GET_VAR 'change: androidx.compose.ui.input.pointer.PointerInputChange declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.input.pointer.PointerInputChange origin=null
+    VAR name:dx type:kotlin.Float [val]
+      CALL 'public final fun minus (other: kotlin.Int): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+        $this: CALL 'public final fun getX-impl (arg0: androidx.compose.ui.geometry.Offset): kotlin.Float [inline] declared in androidx.compose.ui.geometry.Offset' type=kotlin.Float origin=GET_PROPERTY
+          arg0: GET_VAR 'val touch: androidx.compose.ui.geometry.Offset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.geometry.Offset origin=null
+        other: CALL 'public final fun getX-impl (arg0: androidx.compose.ui.unit.IntOffset): kotlin.Int declared in androidx.compose.ui.unit.IntOffset' type=kotlin.Int origin=GET_PROPERTY
+          arg0: GET_VAR 'val center: androidx.compose.ui.unit.IntOffset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.unit.IntOffset origin=null
+    VAR name:dy type:kotlin.Float [val]
+      CALL 'public final fun minus (other: kotlin.Int): kotlin.Float [operator] declared in kotlin.Float' type=kotlin.Float origin=MINUS
+        $this: CALL 'public final fun getY-impl (arg0: androidx.compose.ui.geometry.Offset): kotlin.Float [inline] declared in androidx.compose.ui.geometry.Offset' type=kotlin.Float origin=GET_PROPERTY
+          arg0: GET_VAR 'val touch: androidx.compose.ui.geometry.Offset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.geometry.Offset origin=null
+        other: CALL 'public final fun getY-impl (arg0: androidx.compose.ui.unit.IntOffset): kotlin.Int declared in androidx.compose.ui.unit.IntOffset' type=kotlin.Int origin=GET_PROPERTY
+          arg0: GET_VAR 'val center: androidx.compose.ui.unit.IntOffset [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=androidx.compose.ui.unit.IntOffset origin=null
+    VAR name:radians type:kotlin.Float [val]
+      CALL 'public final fun atan2 (y: kotlin.Float, x: kotlin.Float): kotlin.Float [inline] declared in kotlin.math.MathKt' type=kotlin.Float origin=null
+        y: GET_VAR 'val dy: kotlin.Float [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=kotlin.Float origin=null
+        x: GET_VAR 'val dx: kotlin.Float [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=kotlin.Float origin=null
+    SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:angle type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+      value: CALL 'public open fun toInt (): kotlin.Int declared in kotlin.Double' type=kotlin.Int origin=null
+        $this: CALL 'public open fun toDegrees (p0: kotlin.Double): kotlin.Double declared in java.lang.Math' type=kotlin.Double origin=null
+          p0: CALL 'public open fun toDouble (): kotlin.Double declared in kotlin.Float' type=kotlin.Double origin=null
+            $this: GET_VAR 'val radians: kotlin.Float [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=kotlin.Float origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:40)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:406)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:423)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:168)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitClass(ExpressionCodegen.kt:1000)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitClass(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.declarations.IrClass.accept(IrClass.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:593)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:122)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:413)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitReturn(ExpressionCodegen.kt:1051)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitReturn(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrReturn.accept(IrReturn.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 128 more
+Caused by: java.lang.AssertionError: access of const val: SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:angle type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+  value: CALL 'public open fun toInt (): kotlin.Int declared in kotlin.Double' type=kotlin.Int origin=null
+    $this: CALL 'public open fun toDegrees (p0: kotlin.Double): kotlin.Double declared in java.lang.Math' type=kotlin.Double origin=null
+      p0: CALL 'public open fun toDouble (): kotlin.Double declared in kotlin.Float' type=kotlin.Double origin=null
+        $this: GET_VAR 'val radians: kotlin.Float [val] declared in com.example.imback.ficheros.SlidersKt.MySliderAdvance$lambda$17$lambda$14.<no name provided>.invoke$lambda$0' type=kotlin.Float origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:861)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitSetField(IrElementVisitor.kt:206)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:908)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrSetField.accept(IrSetField.kt:21)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 152 more
+
+
