@@ -22,6 +22,7 @@ fun MySliderParent(modifier: Modifier = Modifier) {
     Column(modifier.padding(30.dp)) {
         MyValue()
         MySliderAdvance()
+        MyRangeSlider()
     }
 
 }
@@ -69,4 +70,9 @@ fun MySliderAdvance(modifier: Modifier = Modifier) {
         Text((state.value.toString()))
         Text(if (textValueChangeFinished) "HAPPY" else "SAD")
     }
+}
+
+@Composable
+fun MyRangeSlider(modifier: Modifier = Modifier) {
+
 }

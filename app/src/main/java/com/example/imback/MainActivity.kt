@@ -8,8 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.imback.ficheros.MySliderParent
-import com.example.imback.ficheros.MyValue
+import com.example.imback.ficheros.MyDropDownItem
 import com.example.imback.ui.theme.ImbackTheme
 
 class MainActivity : ComponentActivity() {
@@ -38,7 +37,8 @@ class MainActivity : ComponentActivity() {
 //                    Start(Modifier.padding(innerPadding))
 //                    Progress(Modifier.padding(innerPadding))
 //                    ToggleControl(Modifier.padding(innerPadding))
-                    MySliderParent(Modifier.padding(innerPadding))
+//                    MySliderParent(Modifier.padding(innerPadding))
+                    MyDropDownItem(Modifier.padding(innerPadding))
                 }
             }
         }
